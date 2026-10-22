@@ -13,3 +13,6 @@ venv/
 # Logs
 *.log
 log.txt
+
+# Runtime state
+stats.json
