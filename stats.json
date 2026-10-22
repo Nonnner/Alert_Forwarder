@@ -1,0 +1,13 @@
+{
+  "daily": {
+    "2026-10-22": {
+      "failed": 8,
+      "forwarded": 0
+    }
+  },
+  "lifetime": {
+    "failed": 8,
+    "forwarded": 0
+  },
+  "updated_at": "2026-10-22T09:11:07+07:00"
+}

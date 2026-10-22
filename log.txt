@@ -1,0 +1,139 @@
+2026-10-22 08:05:01 INFO Scheduler started: interval=5 minute(s), first window from 2026-10-22T07:05:01+07:00
+2026-10-22 08:05:01 INFO Querying records from 2026-10-22T07:05:01+07:00 to 2026-10-22T08:05:01+07:00 (start is inclusive)
+2026-10-22 08:05:01 INFO Access token HTTP status: 200
+2026-10-22 08:05:01 INFO Data API HTTP status: 200
+2026-10-22 08:05:01 INFO Query returned 2 record(s)
+2026-10-22 08:05:01 INFO Forward request: POST https://api.soc.gov.vn/api/v1/alerts, headers={User-Agent: python-requests/2.34.2, Accept-Encoding: gzip, deflate, Accept: application/json, Connection: keep-alive, Content-Type: application/json, Authorization: Basic ****, Content-Length: 1925}, body={"srcip": "", "xdr_killchain_stage": "", "stellar_da_input": 997, "totalbytes": 0, "REMOTE_ADDR": "144.79.79.33", "appid_stdport": "yes", "srcip_geo": {"city": "Unknown", "countryCode": "VN", "latitude": 16.1667, "countryName": "Vietnam", "region": "Unknown", "longitude": 107.8333}, "msg_class": "httpjson", "stellar_uuid": "7d3be154-a05a-466a-93e7-f3580ef64e791792629607624", "tenant_name": "Root Tenant", "receive_time": 1792629607624, "display_name": "Application Compatibility Database launched", "unit_name": "Cuc Hang Hai va Duong Thuy Viet Nam", "org_id": "default-organization", "vendor_id": "VSIEM", "srcip_geo_point": "16.1667,107.8333", "name": "Application Compatibility Database launched", "write_time": 1792629610321, "engid": "ad56000c292fe3e9", "dev_type": "httpjson", "dev_class": "httpjson", "netid": 0, "tactic_id": "", "technique_name": "", "msg_origin": {"source": "httpjson", "processor": {"name": "in_http-httpjson,filter_stellar_normalizer-generic_httpjson", "type": "log_forwarder"}}, "description": "Application Compatibility Database launched", "alert_uuid": "6e0831bd-d8da-43ad-bc1e-3555fc11e398", "threat_score": 0, "engid_gateway": "124.158.5.6", "msgtype_name": "start", "aella_tuples": ".null.null.null", "stellar_client_addr": "144.79.79.33", "stellar_ingestion_port": 5200.0, "dscp_name": "Best Effort", "tenantid": "", "srcip_host": "", "srcip_version": "ipv6", "org_name": "default-organization", "unit_id": "VIMAWA", "alert_timestamp": "2026-10-22T00:40:51.566000+00:00", "timestamp": 1792629606220, "severity": "Medium", "event_score": "50", "netid_name": "vlannull", "totalpackets": 0, "srcip_type": "private", "srcip_reputation": "Good", "engid_name": "internalsds01", "tactic_name": "", "stellar_index_id": "aella-syslog-2026.10.22-", "src_tuples": "null.0.", "srcip_geo_source": "maxmind", "technique_id": "", "locid": "unassigned location", "sensor_id": "b97967dd96402aa76e6e92f8"}
+2026-10-22 08:05:08 ERROR Forward failed for record 1: POST https://api.soc.gov.vn/api/v1/alerts failed: ConnectionError: HTTPSConnectionPool(host='api.soc.gov.vn', port=443): Max retries exceeded with url: /api/v1/alerts (Caused by NameResolutionError("HTTPSConnection(host='api.soc.gov.vn', port=443): Failed to resolve 'api.soc.gov.vn' ([Errno 11002] getaddrinfo failed)"))
+2026-10-22 08:05:08 INFO Forward request: POST https://api.soc.gov.vn/api/v1/alerts, headers={User-Agent: python-requests/2.34.2, Accept-Encoding: gzip, deflate, Accept: application/json, Connection: keep-alive, Content-Type: application/json, Authorization: Basic ****, Content-Length: 1925}, body={"srcip": "", "xdr_killchain_stage": "", "stellar_da_input": 997, "totalbytes": 0, "REMOTE_ADDR": "144.79.79.33", "appid_stdport": "yes", "srcip_geo": {"city": "Unknown", "countryCode": "VN", "latitude": 16.1667, "countryName": "Vietnam", "region": "Unknown", "longitude": 107.8333}, "msg_class": "httpjson", "stellar_uuid": "62596a37-a55d-4823-9f88-04c5dbc27a951792629732301", "tenant_name": "Root Tenant", "receive_time": 1792629732301, "display_name": "Application Compatibility Database launched", "unit_name": "Cuc Hang Hai va Duong Thuy Viet Nam", "org_id": "default-organization", "vendor_id": "VSIEM", "srcip_geo_point": "16.1667,107.8333", "name": "Application Compatibility Database launched", "write_time": 1792629740326, "engid": "ad56000c292fe3e9", "dev_type": "httpjson", "dev_class": "httpjson", "netid": 0, "tactic_id": "", "technique_name": "", "msg_origin": {"source": "httpjson", "processor": {"name": "in_http-httpjson,filter_stellar_normalizer-generic_httpjson", "type": "log_forwarder"}}, "description": "Application Compatibility Database launched", "alert_uuid": "d37d43bd-0d9b-48f0-93a7-7f0427c6c67c", "threat_score": 0, "engid_gateway": "124.158.5.6", "msgtype_name": "start", "aella_tuples": ".null.null.null", "stellar_client_addr": "144.79.79.33", "stellar_ingestion_port": 5200.0, "dscp_name": "Best Effort", "tenantid": "", "srcip_host": "", "srcip_version": "ipv6", "org_name": "default-organization", "unit_id": "VIMAWA", "alert_timestamp": "2026-10-22T00:42:56.698000+00:00", "timestamp": 1792629729846, "severity": "Medium", "event_score": "50", "netid_name": "vlannull", "totalpackets": 0, "srcip_type": "private", "srcip_reputation": "Good", "engid_name": "internalsds01", "tactic_name": "", "stellar_index_id": "aella-syslog-2026.10.22-", "src_tuples": "null.0.", "srcip_geo_source": "maxmind", "technique_id": "", "locid": "unassigned location", "sensor_id": "b97967dd96402aa76e6e92f8"}
+2026-10-22 08:05:08 ERROR Forward failed for record 2: POST https://api.soc.gov.vn/api/v1/alerts failed: ConnectionError: HTTPSConnectionPool(host='api.soc.gov.vn', port=443): Max retries exceeded with url: /api/v1/alerts (Caused by NameResolutionError("HTTPSConnection(host='api.soc.gov.vn', port=443): Failed to resolve 'api.soc.gov.vn' ([Errno 11001] getaddrinfo failed)"))
+2026-10-22 08:05:08 INFO Window completed: total=2, sent=0, failed=2
+2026-10-22 08:05:08 ERROR Cycle failed: IncompleteForwardError: 2 record(s) failed to forward
+2026-10-22 08:05:08 WARNING Keeping window start 2026-10-22T07:05:01+07:00 so the same range is retried
+2026-10-22 08:05:08 INFO Next run at 2026-10-22T08:10:01+07:00
+2026-10-22 09:07:25 INFO Forward stats file stats.json not found yet
+2026-10-22 09:07:25 INFO Scheduler started: interval=5 minute(s), first window from 2026-10-22T08:07:25+07:00
+2026-10-22 09:07:25 INFO Querying records from 2026-10-22T08:07:25+07:00 to 2026-10-22T09:07:25+07:00 (start is inclusive)
+2026-10-22 09:07:25 INFO Access token HTTP status: 200
+2026-10-22 09:07:25 INFO Data API HTTP status: 200
+2026-10-22 09:07:25 INFO Query returned 2 record(s)
+2026-10-22 09:07:25 INFO Forward request: POST https://api.soc.gov.vn/api/v1/alerts, headers={User-Agent: python-requests/2.34.2, Accept-Encoding: gzip, deflate, Accept: application/json, Connection: keep-alive, Content-Type: application/json, Authorization: Basic ****, Content-Length: 1924}, body={"srcip": "", "xdr_killchain_stage": "", "stellar_da_input": 997, "totalbytes": 0, "REMOTE_ADDR": "144.79.79.33", "appid_stdport": "yes", "srcip_geo": {"city": "Hanoi", "countryCode": "VN", "latitude": 21.0184, "countryName": "Vietnam", "region": "Hanoi", "longitude": 105.8461}, "msg_class": "httpjson", "stellar_uuid": "5178daee-a2f5-4c50-88bf-e9de96c124321792633207589", "tenant_name": "Root Tenant", "receive_time": 1792633207589, "display_name": "Application Compatibility Database launched", "unit_name": "Cuc Hang Hai va Duong Thuy Viet Nam", "org_id": "default-organization", "vendor_id": "VSIEM", "srcip_geo_point": "21.0184,105.8461", "name": "Application Compatibility Database launched", "write_time": 1792633210412, "engid": "ad56000c292fe3e9", "dev_type": "httpjson", "dev_class": "httpjson", "netid": 0, "tactic_id": "", "technique_name": "", "msg_origin": {"source": "httpjson", "processor": {"name": "in_http-httpjson,filter_stellar_normalizer-generic_httpjson", "type": "log_forwarder"}}, "description": "Application Compatibility Database launched", "alert_uuid": "d84f499d-760e-4d4d-a475-98cad05aec44", "threat_score": 0, "engid_gateway": "119.15.167.216", "msgtype_name": "start", "aella_tuples": ".null.null.null", "stellar_client_addr": "144.79.79.33", "stellar_ingestion_port": 5200.0, "dscp_name": "Best Effort", "tenantid": "", "srcip_host": "", "srcip_version": "ipv6", "org_name": "default-organization", "unit_id": "VIMAWA", "alert_timestamp": "2026-10-22T01:40:52.163000+00:00", "timestamp": 1792633205606, "severity": "Medium", "event_score": "50", "netid_name": "vlannull", "totalpackets": 0, "srcip_type": "private", "srcip_reputation": "Good", "engid_name": "internalsds01", "tactic_name": "", "stellar_index_id": "aella-syslog-2026.10.22-", "src_tuples": "null.0.", "srcip_geo_source": "maxmind", "technique_id": "", "locid": "unassigned location", "sensor_id": "b97967dd96402aa76e6e92f8"}
+2026-10-22 09:07:26 INFO Forward response: status=502, elapsed=0.143s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:07:26 ERROR Forward failed for record 1: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:07:26 INFO Forward request: POST https://api.soc.gov.vn/api/v1/alerts, headers={User-Agent: python-requests/2.34.2, Accept-Encoding: gzip, deflate, Accept: application/json, Connection: keep-alive, Content-Type: application/json, Authorization: Basic ****, Content-Length: 1924}, body={"srcip": "", "xdr_killchain_stage": "", "stellar_da_input": 997, "totalbytes": 0, "REMOTE_ADDR": "144.79.79.33", "appid_stdport": "yes", "srcip_geo": {"city": "Hanoi", "countryCode": "VN", "latitude": 21.0184, "countryName": "Vietnam", "region": "Hanoi", "longitude": 105.8461}, "msg_class": "httpjson", "stellar_uuid": "06e58716-7097-4f7d-8593-634497ff25ea1792633334229", "tenant_name": "Root Tenant", "receive_time": 1792633334229, "display_name": "Application Compatibility Database launched", "unit_name": "Cuc Hang Hai va Duong Thuy Viet Nam", "org_id": "default-organization", "vendor_id": "VSIEM", "srcip_geo_point": "21.0184,105.8461", "name": "Application Compatibility Database launched", "write_time": 1792633340283, "engid": "ad56000c292fe3e9", "dev_type": "httpjson", "dev_class": "httpjson", "netid": 0, "tactic_id": "", "technique_name": "", "msg_origin": {"source": "httpjson", "processor": {"name": "in_http-httpjson,filter_stellar_normalizer-generic_httpjson", "type": "log_forwarder"}}, "description": "Application Compatibility Database launched", "alert_uuid": "e37a7615-64d3-4121-9972-0ac42b343401", "threat_score": 0, "engid_gateway": "119.15.167.216", "msgtype_name": "start", "aella_tuples": ".null.null.null", "stellar_client_addr": "144.79.79.33", "stellar_ingestion_port": 5200.0, "dscp_name": "Best Effort", "tenantid": "", "srcip_host": "", "srcip_version": "ipv6", "org_name": "default-organization", "unit_id": "VIMAWA", "alert_timestamp": "2026-10-22T01:42:57.038000+00:00", "timestamp": 1792633329632, "severity": "Medium", "event_score": "50", "netid_name": "vlannull", "totalpackets": 0, "srcip_type": "private", "srcip_reputation": "Good", "engid_name": "internalsds01", "tactic_name": "", "stellar_index_id": "aella-syslog-2026.10.22-", "src_tuples": "null.0.", "srcip_geo_source": "maxmind", "technique_id": "", "locid": "unassigned location", "sensor_id": "b97967dd96402aa76e6e92f8"}
+2026-10-22 09:07:26 INFO Forward response: status=502, elapsed=0.023s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:07:26 ERROR Forward failed for record 2: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:07:26 INFO Window completed: total=2, sent=0, failed=2
+2026-10-22 09:07:26 INFO Forward totals: today=0, lifetime=0, failed today=2, lifetime=2
+2026-10-22 09:07:26 ERROR Cycle failed: IncompleteForwardError: 2 record(s) failed to forward
+2026-10-22 09:07:26 WARNING Keeping window start 2026-10-22T08:07:25+07:00 so the same range is retried
+2026-10-22 09:07:26 INFO Next run at 2026-10-22T09:12:25+07:00
+2026-10-22 09:07:51 INFO Run summary: forwarded today=0, lifetime=0, failed today=2, lifetime=2
+2026-10-22 09:09:12 INFO Forward stats loaded from stats.json: lifetime forwarded=0, failed=2
+2026-10-22 09:09:12 INFO Scheduler started: interval=5 minute(s), first window from 2026-10-22T08:09:12+07:00
+2026-10-22 09:09:12 INFO Querying records from 2026-10-22T08:09:12+07:00 to 2026-10-22T09:09:12+07:00 (start is inclusive)
+2026-10-22 09:09:12 INFO Access token HTTP status: 200
+2026-10-22 09:09:12 INFO Data API HTTP status: 200
+2026-10-22 09:09:12 INFO Query returned 2 record(s)
+2026-10-22 09:09:12 INFO Forward request: POST https://api.soc.gov.vn/api/v1/alerts, headers={User-Agent: python-requests/2.34.2, Accept-Encoding: gzip, deflate, Accept: application/json, Connection: keep-alive, Content-Type: application/json, Authorization: Basic ****, Content-Length: 1924}, body={"srcip": "", "xdr_killchain_stage": "", "stellar_da_input": 997, "totalbytes": 0, "REMOTE_ADDR": "144.79.79.33", "appid_stdport": "yes", "srcip_geo": {"city": "Hanoi", "countryCode": "VN", "latitude": 21.0184, "countryName": "Vietnam", "region": "Hanoi", "longitude": 105.8461}, "msg_class": "httpjson", "stellar_uuid": "5178daee-a2f5-4c50-88bf-e9de96c124321792633207589", "tenant_name": "Root Tenant", "receive_time": 1792633207589, "display_name": "Application Compatibility Database launched", "unit_name": "Cuc Hang Hai va Duong Thuy Viet Nam", "org_id": "default-organization", "vendor_id": "VSIEM", "srcip_geo_point": "21.0184,105.8461", "name": "Application Compatibility Database launched", "write_time": 1792633210412, "engid": "ad56000c292fe3e9", "dev_type": "httpjson", "dev_class": "httpjson", "netid": 0, "tactic_id": "", "technique_name": "", "msg_origin": {"source": "httpjson", "processor": {"name": "in_http-httpjson,filter_stellar_normalizer-generic_httpjson", "type": "log_forwarder"}}, "description": "Application Compatibility Database launched", "alert_uuid": "d84f499d-760e-4d4d-a475-98cad05aec44", "threat_score": 0, "engid_gateway": "119.15.167.216", "msgtype_name": "start", "aella_tuples": ".null.null.null", "stellar_client_addr": "144.79.79.33", "stellar_ingestion_port": 5200.0, "dscp_name": "Best Effort", "tenantid": "", "srcip_host": "", "srcip_version": "ipv6", "org_name": "default-organization", "unit_id": "VIMAWA", "alert_timestamp": "2026-10-22T01:40:52.163000+00:00", "timestamp": 1792633205606, "severity": "Medium", "event_score": "50", "netid_name": "vlannull", "totalpackets": 0, "srcip_type": "private", "srcip_reputation": "Good", "engid_name": "internalsds01", "tactic_name": "", "stellar_index_id": "aella-syslog-2026.10.22-", "src_tuples": "null.0.", "srcip_geo_source": "maxmind", "technique_id": "", "locid": "unassigned location", "sensor_id": "b97967dd96402aa76e6e92f8"}
+2026-10-22 09:09:12 INFO Forward response: status=502, elapsed=0.163s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:09:12 ERROR Forward failed for record 1: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:09:12 INFO Forward request: POST https://api.soc.gov.vn/api/v1/alerts, headers={User-Agent: python-requests/2.34.2, Accept-Encoding: gzip, deflate, Accept: application/json, Connection: keep-alive, Content-Type: application/json, Authorization: Basic ****, Content-Length: 1924}, body={"srcip": "", "xdr_killchain_stage": "", "stellar_da_input": 997, "totalbytes": 0, "REMOTE_ADDR": "144.79.79.33", "appid_stdport": "yes", "srcip_geo": {"city": "Hanoi", "countryCode": "VN", "latitude": 21.0184, "countryName": "Vietnam", "region": "Hanoi", "longitude": 105.8461}, "msg_class": "httpjson", "stellar_uuid": "06e58716-7097-4f7d-8593-634497ff25ea1792633334229", "tenant_name": "Root Tenant", "receive_time": 1792633334229, "display_name": "Application Compatibility Database launched", "unit_name": "Cuc Hang Hai va Duong Thuy Viet Nam", "org_id": "default-organization", "vendor_id": "VSIEM", "srcip_geo_point": "21.0184,105.8461", "name": "Application Compatibility Database launched", "write_time": 1792633340283, "engid": "ad56000c292fe3e9", "dev_type": "httpjson", "dev_class": "httpjson", "netid": 0, "tactic_id": "", "technique_name": "", "msg_origin": {"source": "httpjson", "processor": {"name": "in_http-httpjson,filter_stellar_normalizer-generic_httpjson", "type": "log_forwarder"}}, "description": "Application Compatibility Database launched", "alert_uuid": "e37a7615-64d3-4121-9972-0ac42b343401", "threat_score": 0, "engid_gateway": "119.15.167.216", "msgtype_name": "start", "aella_tuples": ".null.null.null", "stellar_client_addr": "144.79.79.33", "stellar_ingestion_port": 5200.0, "dscp_name": "Best Effort", "tenantid": "", "srcip_host": "", "srcip_version": "ipv6", "org_name": "default-organization", "unit_id": "VIMAWA", "alert_timestamp": "2026-10-22T01:42:57.038000+00:00", "timestamp": 1792633329632, "severity": "Medium", "event_score": "50", "netid_name": "vlannull", "totalpackets": 0, "srcip_type": "private", "srcip_reputation": "Good", "engid_name": "internalsds01", "tactic_name": "", "stellar_index_id": "aella-syslog-2026.10.22-", "src_tuples": "null.0.", "srcip_geo_source": "maxmind", "technique_id": "", "locid": "unassigned location", "sensor_id": "b97967dd96402aa76e6e92f8"}
+2026-10-22 09:09:12 INFO Forward response: status=502, elapsed=0.029s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:09:12 ERROR Forward failed for record 2: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:09:12 INFO Window completed: total=2, sent=0, failed=2
+2026-10-22 09:09:12 INFO Forward totals: today=0, lifetime=0, failed today=4, lifetime=4
+2026-10-22 09:09:12 ERROR Cycle failed: IncompleteForwardError: 2 record(s) failed to forward
+2026-10-22 09:09:12 WARNING Keeping window start 2026-10-22T08:09:12+07:00 so the same range is retried
+2026-10-22 09:09:12 INFO Next run at 2026-10-22T09:14:12+07:00
+2026-10-22 09:09:18 INFO Run summary: forwarded today=0, lifetime=0, failed today=4, lifetime=4
+2026-10-22 09:09:29 INFO Forward stats loaded from stats.json: lifetime forwarded=0, failed=4
+2026-10-22 09:09:29 INFO Scheduler started: interval=5 minute(s), first window from 2026-10-22T08:09:29+07:00
+2026-10-22 09:09:29 INFO Querying records from 2026-10-22T08:09:29+07:00 to 2026-10-22T09:09:29+07:00 (start is inclusive)
+2026-10-22 09:09:29 INFO Access token HTTP status: 200
+2026-10-22 09:09:29 INFO Data API HTTP status: 200
+2026-10-22 09:09:29 INFO Query returned 2 record(s)
+2026-10-22 09:09:29 INFO Forward request: POST https://api.soc.gov.vn/api/v1/alerts, headers={User-Agent: python-requests/2.34.2, Accept-Encoding: gzip, deflate, Accept: application/json, Connection: keep-alive, Content-Type: application/json, Authorization: Basic ****, Content-Length: 1924}, body={"srcip": "", "xdr_killchain_stage": "", "stellar_da_input": 997, "totalbytes": 0, "REMOTE_ADDR": "144.79.79.33", "appid_stdport": "yes", "srcip_geo": {"city": "Hanoi", "countryCode": "VN", "latitude": 21.0184, "countryName": "Vietnam", "region": "Hanoi", "longitude": 105.8461}, "msg_class": "httpjson", "stellar_uuid": "5178daee-a2f5-4c50-88bf-e9de96c124321792633207589", "tenant_name": "Root Tenant", "receive_time": 1792633207589, "display_name": "Application Compatibility Database launched", "unit_name": "Cuc Hang Hai va Duong Thuy Viet Nam", "org_id": "default-organization", "vendor_id": "VSIEM", "srcip_geo_point": "21.0184,105.8461", "name": "Application Compatibility Database launched", "write_time": 1792633210412, "engid": "ad56000c292fe3e9", "dev_type": "httpjson", "dev_class": "httpjson", "netid": 0, "tactic_id": "", "technique_name": "", "msg_origin": {"source": "httpjson", "processor": {"name": "in_http-httpjson,filter_stellar_normalizer-generic_httpjson", "type": "log_forwarder"}}, "description": "Application Compatibility Database launched", "alert_uuid": "d84f499d-760e-4d4d-a475-98cad05aec44", "threat_score": 0, "engid_gateway": "119.15.167.216", "msgtype_name": "start", "aella_tuples": ".null.null.null", "stellar_client_addr": "144.79.79.33", "stellar_ingestion_port": 5200.0, "dscp_name": "Best Effort", "tenantid": "", "srcip_host": "", "srcip_version": "ipv6", "org_name": "default-organization", "unit_id": "VIMAWA", "alert_timestamp": "2026-10-22T01:40:52.163000+00:00", "timestamp": 1792633205606, "severity": "Medium", "event_score": "50", "netid_name": "vlannull", "totalpackets": 0, "srcip_type": "private", "srcip_reputation": "Good", "engid_name": "internalsds01", "tactic_name": "", "stellar_index_id": "aella-syslog-2026.10.22-", "src_tuples": "null.0.", "srcip_geo_source": "maxmind", "technique_id": "", "locid": "unassigned location", "sensor_id": "b97967dd96402aa76e6e92f8"}
+2026-10-22 09:09:29 INFO Forward response: status=502, elapsed=0.097s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:09:29 ERROR Forward failed for record 1: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:09:29 INFO Forward request: POST https://api.soc.gov.vn/api/v1/alerts, headers={User-Agent: python-requests/2.34.2, Accept-Encoding: gzip, deflate, Accept: application/json, Connection: keep-alive, Content-Type: application/json, Authorization: Basic ****, Content-Length: 1924}, body={"srcip": "", "xdr_killchain_stage": "", "stellar_da_input": 997, "totalbytes": 0, "REMOTE_ADDR": "144.79.79.33", "appid_stdport": "yes", "srcip_geo": {"city": "Hanoi", "countryCode": "VN", "latitude": 21.0184, "countryName": "Vietnam", "region": "Hanoi", "longitude": 105.8461}, "msg_class": "httpjson", "stellar_uuid": "06e58716-7097-4f7d-8593-634497ff25ea1792633334229", "tenant_name": "Root Tenant", "receive_time": 1792633334229, "display_name": "Application Compatibility Database launched", "unit_name": "Cuc Hang Hai va Duong Thuy Viet Nam", "org_id": "default-organization", "vendor_id": "VSIEM", "srcip_geo_point": "21.0184,105.8461", "name": "Application Compatibility Database launched", "write_time": 1792633340283, "engid": "ad56000c292fe3e9", "dev_type": "httpjson", "dev_class": "httpjson", "netid": 0, "tactic_id": "", "technique_name": "", "msg_origin": {"source": "httpjson", "processor": {"name": "in_http-httpjson,filter_stellar_normalizer-generic_httpjson", "type": "log_forwarder"}}, "description": "Application Compatibility Database launched", "alert_uuid": "e37a7615-64d3-4121-9972-0ac42b343401", "threat_score": 0, "engid_gateway": "119.15.167.216", "msgtype_name": "start", "aella_tuples": ".null.null.null", "stellar_client_addr": "144.79.79.33", "stellar_ingestion_port": 5200.0, "dscp_name": "Best Effort", "tenantid": "", "srcip_host": "", "srcip_version": "ipv6", "org_name": "default-organization", "unit_id": "VIMAWA", "alert_timestamp": "2026-10-22T01:42:57.038000+00:00", "timestamp": 1792633329632, "severity": "Medium", "event_score": "50", "netid_name": "vlannull", "totalpackets": 0, "srcip_type": "private", "srcip_reputation": "Good", "engid_name": "internalsds01", "tactic_name": "", "stellar_index_id": "aella-syslog-2026.10.22-", "src_tuples": "null.0.", "srcip_geo_source": "maxmind", "technique_id": "", "locid": "unassigned location", "sensor_id": "b97967dd96402aa76e6e92f8"}
+2026-10-22 09:09:29 INFO Forward response: status=502, elapsed=0.026s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:09:29 ERROR Forward failed for record 2: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:09:29 INFO Window completed: total=2, sent=0, failed=2
+2026-10-22 09:09:29 INFO Forward totals: today=0, lifetime=0, failed today=6, lifetime=6
+2026-10-22 09:09:29 ERROR Cycle failed: IncompleteForwardError: 2 record(s) failed to forward
+2026-10-22 09:09:29 WARNING Keeping window start 2026-10-22T08:09:29+07:00 so the same range is retried
+2026-10-22 09:09:29 INFO Next run at 2026-10-22T09:14:29+07:00
+2026-10-22 09:09:52 INFO Run summary: forwarded today=0, lifetime=0, failed today=6, lifetime=6
+2026-10-22 09:11:04 INFO Forward stats loaded from stats.json: lifetime forwarded=0, failed=6
+2026-10-22 09:11:04 INFO Scheduler started: interval=5 minute(s), first window from 2026-10-22T08:11:04+07:00
+2026-10-22 09:11:04 INFO Querying records from 2026-10-22T08:11:04+07:00 to 2026-10-22T09:11:04+07:00 (start is inclusive)
+2026-10-22 09:11:04 INFO Access token HTTP status: 200
+2026-10-22 09:11:04 INFO Data API HTTP status: 200
+2026-10-22 09:11:04 INFO Query returned 2 record(s)
+2026-10-22 09:11:07 INFO Forward response: status=502, elapsed=2.949s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:11:07 ERROR Forward failed for record 1: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:11:07 INFO Forward response: status=502, elapsed=0.016s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:11:07 ERROR Forward failed for record 2: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:11:07 INFO Window completed: total=2, sent=0, failed=2
+2026-10-22 09:11:07 INFO Forward totals: today=0, lifetime=0, failed today=8, lifetime=8
+2026-10-22 09:11:07 ERROR Cycle failed: IncompleteForwardError: 2 record(s) failed to forward
+2026-10-22 09:11:07 WARNING Keeping window start 2026-10-22T08:11:04+07:00 so the same range is retried
+2026-10-22 09:11:07 INFO Next run at 2026-10-22T09:16:04+07:00
+2026-10-22 09:11:14 INFO Run summary: forwarded today=0, lifetime=0, failed today=8, lifetime=8
