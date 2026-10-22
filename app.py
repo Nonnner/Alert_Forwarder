@@ -108,6 +108,7 @@ def main() -> int:
         level=settings.logging.level,
         enabled=settings.logging.enabled,
         retention_days=settings.logging.retention_days,
+        console=settings.logging.console,
     )
 
     stats = build_stats(settings)

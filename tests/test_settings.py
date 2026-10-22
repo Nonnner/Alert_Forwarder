@@ -31,6 +31,7 @@ class SettingsTest(unittest.TestCase):
         self.assertEqual(settings.destination.request_timeout, 30)
         self.assertEqual(settings.logging.log_file, "log.txt")
         self.assertTrue(settings.logging.enabled)
+        self.assertTrue(settings.logging.console)
         self.assertEqual(settings.logging.level, logging.INFO)
         self.assertTrue(settings.logging.log_request)
         self.assertTrue(settings.logging.log_response)
@@ -51,6 +52,7 @@ class SettingsTest(unittest.TestCase):
                 SEARCH_TIME_ZONE="+09:00",
                 LOG_FILE="logs/forwarder.log",
                 LOG_ENABLED="false",
+                LOG_CONSOLE="false",
                 LOG_LEVEL="debug",
                 LOG_REQUEST="false",
                 LOG_RESPONSE="no",
@@ -70,6 +72,7 @@ class SettingsTest(unittest.TestCase):
         self.assertEqual(settings.stellar.search_time_zone, "+09:00")
         self.assertEqual(settings.logging.log_file, "logs/forwarder.log")
         self.assertFalse(settings.logging.enabled)
+        self.assertFalse(settings.logging.console)
         self.assertEqual(settings.logging.level, logging.DEBUG)
         self.assertFalse(settings.logging.log_request)
         self.assertFalse(settings.logging.log_response)

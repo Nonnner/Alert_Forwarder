@@ -17,11 +17,14 @@ def configure_logging(
     level: int = logging.INFO,
     enabled: bool = True,
     retention_days: int = 0,
+    console: bool = True,
 ) -> logging.Logger:
     """Configure console and file handlers once and return the logger.
 
-    The file handler rotates at midnight into ``<log_file>.YYYY-MM-DD`` and
-    deletes backups older than ``retention_days`` (0 keeps every backup).
+    ``console=False`` skips the stream handler so records are written to the
+    log file only. The file handler rotates at midnight into
+    ``<log_file>.YYYY-MM-DD`` and deletes backups older than
+    ``retention_days`` (0 keeps every backup).
     """
     logger = get_logger()
     if logger.handlers:
@@ -41,9 +44,10 @@ def configure_logging(
         datefmt="%Y-%m-%d %H:%M:%S",
     )
 
-    console_handler = logging.StreamHandler()
-    console_handler.setFormatter(formatter)
-    logger.addHandler(console_handler)
+    if console:
+        console_handler = logging.StreamHandler()
+        console_handler.setFormatter(formatter)
+        logger.addHandler(console_handler)
 
     try:
         file_handler = TimedRotatingFileHandler(

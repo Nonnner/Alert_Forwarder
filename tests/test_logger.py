@@ -57,6 +57,38 @@ class ConfigureLoggingTest(unittest.TestCase):
         self.assertNotIn("skipped record", content)
         self.assertIn("kept record", content)
 
+    def test_console_handler_absent_when_console_disabled(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = os.path.join(temp_dir, "app.log")
+            logger = configure_logging(log_file=path, level=logging.INFO, console=False)
+
+            stream_handlers = [
+                handler
+                for handler in logger.handlers
+                if isinstance(handler, logging.StreamHandler)
+                and not isinstance(handler, logging.FileHandler)
+            ]
+            logger.info("file only")
+            content = self._read_and_close(path)
+
+        self.assertEqual(stream_handlers, [])
+        self.assertIn("file only", content)
+
+    def test_console_handler_present_by_default(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            path = os.path.join(temp_dir, "app.log")
+            logger = configure_logging(log_file=path, level=logging.INFO)
+
+            stream_handlers = [
+                handler
+                for handler in logger.handlers
+                if isinstance(handler, logging.StreamHandler)
+                and not isinstance(handler, logging.FileHandler)
+            ]
+            self._close_handlers()
+
+        self.assertEqual(len(stream_handlers), 1)
+
     def test_file_handler_rotates_at_midnight_with_retention(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             path = os.path.join(temp_dir, "app.log")

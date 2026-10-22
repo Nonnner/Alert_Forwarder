@@ -137,3 +137,65 @@
 2026-10-22 09:11:07 WARNING Keeping window start 2026-10-22T08:11:04+07:00 so the same range is retried
 2026-10-22 09:11:07 INFO Next run at 2026-10-22T09:16:04+07:00
 2026-10-22 09:11:14 INFO Run summary: forwarded today=0, lifetime=0, failed today=8, lifetime=8
+2026-10-22 09:42:09 INFO Forward stats loaded from stats.json: lifetime forwarded=0, failed=8
+2026-10-22 09:42:09 INFO Scheduler started: interval=5 minute(s), first window from 2026-10-22T08:42:09+07:00
+2026-10-22 09:42:09 INFO Querying records from 2026-10-22T08:42:09+07:00 to 2026-10-22T09:42:09+07:00 (start is inclusive)
+2026-10-22 09:42:10 INFO Access token HTTP status: 200
+2026-10-22 09:42:10 INFO Data API HTTP status: 200
+2026-10-22 09:42:10 INFO Query returned 4 record(s)
+2026-10-22 09:42:12 INFO Forward response: status=502, elapsed=2.383s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:42:12 ERROR Forward failed for record 1: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:42:12 INFO Forward response: status=502, elapsed=0.017s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:42:12 ERROR Forward failed for record 2: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:42:12 INFO Forward response: status=502, elapsed=0.016s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:42:12 ERROR Forward failed for record 3: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:42:12 INFO Forward response: status=502, elapsed=0.014s, body=<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.27.0</center>
+</body>
+</html>
+
+2026-10-22 09:42:12 ERROR Forward failed for record 4: Destination https://api.soc.gov.vn/api/v1/alerts returned HTTP 502
+2026-10-22 09:42:12 INFO Window completed: total=4, sent=0, failed=4
+2026-10-22 09:42:12 INFO Forward totals: today=0, lifetime=0, failed today=12, lifetime=12
+2026-10-22 09:42:12 ERROR Cycle failed: IncompleteForwardError: 4 record(s) failed to forward
+2026-10-22 09:42:12 WARNING Keeping window start 2026-10-22T08:42:09+07:00 so the same range is retried
+2026-10-22 09:42:12 INFO Next run at 2026-10-22T09:47:09+07:00
+2026-10-22 09:42:25 INFO Run summary: forwarded today=0, lifetime=0, failed today=12, lifetime=12
+2026-10-22 10:24:56 INFO Forward stats loaded from stats.json: lifetime forwarded=0, failed=12
+2026-10-22 10:24:56 INFO Scheduler started: interval=5 minute(s), first window from 2026-10-22T09:24:56+07:00
+2026-10-22 10:24:56 INFO Querying records from 2026-10-22T09:24:56+07:00 to 2026-10-22T10:24:56+07:00 (start is inclusive)
+2026-10-22 10:24:56 INFO Access token HTTP status: 200
+2026-10-22 10:24:57 INFO Data API HTTP status: 200
+2026-10-22 10:24:57 INFO Query returned 2 record(s)
+2026-10-22 10:25:03 ERROR Forward failed for record 1: POST https://api.soc.gov.vn/api/v1/alerts failed: ConnectionError: HTTPSConnectionPool(host='api.soc.gov.vn', port=443): Max retries exceeded with url: /api/v1/alerts (Caused by NameResolutionError("HTTPSConnection(host='api.soc.gov.vn', port=443): Failed to resolve 'api.soc.gov.vn' ([Errno 11002] getaddrinfo failed)"))
+2026-10-22 10:25:03 ERROR Forward failed for record 2: POST https://api.soc.gov.vn/api/v1/alerts failed: ConnectionError: HTTPSConnectionPool(host='api.soc.gov.vn', port=443): Max retries exceeded with url: /api/v1/alerts (Caused by NameResolutionError("HTTPSConnection(host='api.soc.gov.vn', port=443): Failed to resolve 'api.soc.gov.vn' ([Errno 11001] getaddrinfo failed)"))
+2026-10-22 10:25:03 INFO Window completed: total=2, sent=0, failed=2
+2026-10-22 10:25:03 INFO Forward totals: today=0, lifetime=0, failed today=14, lifetime=14
+2026-10-22 10:25:03 ERROR Cycle failed: IncompleteForwardError: 2 record(s) failed to forward
+2026-10-22 10:25:03 WARNING Keeping window start 2026-10-22T09:24:56+07:00 so the same range is retried
+2026-10-22 10:25:03 INFO Next run at 2026-10-22T10:29:56+07:00
+2026-10-22 10:25:04 INFO Run summary: forwarded today=0, lifetime=0, failed today=14, lifetime=14
