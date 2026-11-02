@@ -59,7 +59,11 @@ class StellarSearchQueryBuilder:
             "query": {
                 "bool": {
                     "filter": [
-                        {"term": {"msg_origin.source.keyword": "httpjson"}},
+                        {
+                            "terms": {
+                                "msg_origin.source.keyword": ["httpjson", "json"]
+                            }
+                        },
                         {
                             "range": {
                                 "timestamp": {
@@ -78,6 +82,7 @@ class StellarSearchQueryBuilder:
                                 "should": [
                                     {"exists": {"field": "unit_id"}},
                                     {"exists": {"field": "UNIT_ID"}},
+                                    {"exists": {"field": "syslogjson.unit_id"}},
                                 ],
                                 "minimum_should_match": 1,
                             }

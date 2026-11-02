@@ -39,6 +39,27 @@ class EventExtractor:
                     "Stellar record has an invalid '_source' object"
                 )
 
-            events.append(Event(dict(source)))
+            events.append(Event(EventExtractor._normalize_source(source)))
 
         return events
+
+    @staticmethod
+    def _normalize_source(source: Mapping[str, Any]) -> dict[str, Any]:
+        """Flatten the nested payload used by events from the ``json`` source."""
+        message_origin = source.get("msg_origin")
+        source_name = (
+            message_origin.get("source")
+            if isinstance(message_origin, Mapping)
+            else None
+        )
+        if source_name != "json":
+            return dict(source)
+
+        syslogjson = source.get("syslogjson")
+        if not isinstance(syslogjson, Mapping):
+            return dict(source)
+
+        normalized = dict(source)
+        normalized.pop("syslogjson", None)
+        normalized.update(syslogjson)
+        return normalized

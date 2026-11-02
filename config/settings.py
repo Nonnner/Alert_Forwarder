@@ -116,6 +116,7 @@ class DestinationSettings:
 class LoggingSettings:
     log_file: str
     enabled: bool
+    console: bool
     level: int
     log_request: bool
     log_response: bool
@@ -216,6 +217,7 @@ class Settings:
             logging=LoggingSettings(
                 log_file=_read(source, "LOG_FILE") or DEFAULT_LOG_FILE,
                 enabled=_read_bool(source, "LOG_ENABLED", True),
+                console=_read_bool(source, "LOG_CONSOLE", True),
                 level=_parse_log_level(
                     "LOG_LEVEL", _read(source, "LOG_LEVEL", DEFAULT_LOG_LEVEL)
                 ),
