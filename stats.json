@@ -3,11 +3,15 @@
     "2026-10-22": {
       "failed": 14,
       "forwarded": 0
+    },
+    "2026-11-02": {
+      "failed": 0,
+      "forwarded": 88
     }
   },
   "lifetime": {
     "failed": 14,
-    "forwarded": 0
+    "forwarded": 88
   },
-  "updated_at": "2026-10-22T10:25:03+07:00"
+  "updated_at": "2026-11-02T15:35:23+07:00"
 }

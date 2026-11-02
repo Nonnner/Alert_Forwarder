@@ -48,7 +48,8 @@ class StellarSearchQueryBuilderTest(unittest.TestCase):
         filters = query["query"]["bool"]["filter"]
 
         self.assertEqual(
-            filters[0], {"term": {"msg_origin.source.keyword": "httpjson"}}
+            filters[0],
+            {"terms": {"msg_origin.source.keyword": ["httpjson", "json"]}},
         )
         self.assertEqual(
             filters[1]["range"]["timestamp"],
@@ -63,6 +64,7 @@ class StellarSearchQueryBuilderTest(unittest.TestCase):
             [
                 {"exists": {"field": "unit_id"}},
                 {"exists": {"field": "UNIT_ID"}},
+                {"exists": {"field": "syslogjson.unit_id"}},
             ],
         )
         self.assertEqual(filters[2]["bool"]["minimum_should_match"], 1)

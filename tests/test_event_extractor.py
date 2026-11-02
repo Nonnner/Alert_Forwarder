@@ -26,6 +26,42 @@ class EventExtractorTest(unittest.TestCase):
 
         self.assertEqual(events[0].data, {"UNIT_ID": "u1"})
 
+    def test_flattens_syslogjson_for_json_source(self):
+        source = {
+            "msg_origin": {"source": "json"},
+            "timestamp": "2026-10-21T00:00:00.000",
+            "syslogjson": {
+                "unit_id": "unit-1",
+                "severity": 4,
+                "nested": {"key": "value"},
+            },
+            "other": "kept",
+        }
+
+        events = EventExtractor.extract({"hits": {"hits": [{"_source": source}]}})
+
+        self.assertEqual(
+            events[0].data,
+            {
+                "msg_origin": {"source": "json"},
+                "timestamp": "2026-10-21T00:00:00.000",
+                "unit_id": "unit-1",
+                "severity": 4,
+                "nested": {"key": "value"},
+                "other": "kept",
+            },
+        )
+
+    def test_keeps_syslogjson_for_httpjson_source(self):
+        source = {
+            "msg_origin": {"source": "httpjson"},
+            "syslogjson": {"unit_id": "unit-1"},
+        }
+
+        events = EventExtractor.extract({"hits": {"hits": [{"_source": source}]}})
+
+        self.assertEqual(events[0].data, source)
+
     def test_missing_hits_yields_no_events(self):
         self.assertEqual(EventExtractor.extract({}), [])
 
